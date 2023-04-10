@@ -11,6 +11,7 @@
 		DC7D5E3829E4907E00B4E590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D5E3729E4907E00B4E590 /* ContentView.swift */; };
 		DC7D5E3A29E4907F00B4E590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7D5E3929E4907F00B4E590 /* Assets.xcassets */; };
 		DC7D5E3D29E4907F00B4E590 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7D5E3C29E4907F00B4E590 /* Preview Assets.xcassets */; };
+		DC7D5E4429E4939B00B4E590 /* mainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D5E4329E4939B00B4E590 /* mainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		DC7D5E3729E4907E00B4E590 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC7D5E3929E4907F00B4E590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC7D5E3C29E4907F00B4E590 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC7D5E4329E4939B00B4E590 /* mainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				DC7D5E3529E4907E00B4E590 /* devConfApp.swift */,
+				DC7D5E4329E4939B00B4E590 /* mainScreen.swift */,
 				DC7D5E3729E4907E00B4E590 /* ContentView.swift */,
 				DC7D5E3929E4907F00B4E590 /* Assets.xcassets */,
 				DC7D5E3B29E4907F00B4E590 /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7D5E3829E4907E00B4E590 /* ContentView.swift in Sources */,
+				DC7D5E4429E4939B00B4E590 /* mainScreen.swift in Sources */,
 				DC7D5E3629E4907E00B4E590 /* devConfApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
