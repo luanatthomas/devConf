@@ -9,12 +9,21 @@ import SwiftUI
 
 struct mainScreen: View {
     var body: some View {
-        ZStack{
-            Image("mainscreen")
-                .resizable()
-                .ignoresSafeArea(.all)
-            
-        }
+       // GeometryReader{ reader in
+           // NavigationStack{
+                ZStack{
+                    Image("mainscreen")
+                        .resizable()
+                        .ignoresSafeArea(.all)
+                    
+                    VStack{
+                        
+                    }
+                    Text("Oi")
+                
+                }
+           // }
+       // }
     }
 }
 
