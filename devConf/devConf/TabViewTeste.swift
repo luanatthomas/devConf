@@ -7,49 +7,46 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TabViewTeste: View {
     var body: some View {
         TabView {
             Text("Home Tab")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-                    Image(systemName: "calendar")
-                    Text("Agenda")
+                    Label("Agenda", systemImage: "calendar")
                 }
          
             Text("Bookmark Tab")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-                    Image(systemName: "map")
-                    Text("Mapa")
+                    Label("Mapa", systemImage: "map")
                 }
          
             Text("Video Tab")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-                    Image(systemName: "text.bubble")
-                    Text("Palestra")
+                    Label("Palestra", systemImage: "text.bubble")
                 }
          
-            Text("Profile Tab")
+            //Text("Profile Tab")
+            Favorites()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-                    Image(systemName: "heart")
-                    Text("Profile")
+                    Label("Favoritos", systemImage: "heart")
                 }
             
-            Text("Profile Tab")
+            //Text("Profile Tab")
+            Profile()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-                    Image(systemName: "person")
-                    Text("Perfil")
+                    Label("Perfil", systemImage: "person")
                 }
-        }
+        }.background(Color.clear)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TabViewTeste_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TabViewTeste()
     }
 }
