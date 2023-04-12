@@ -20,36 +20,70 @@ struct Evento: Identifiable {
 }
 
 var lista1 : [Evento] = [
-    Evento(hora: "08:00", nome: "teste", fav: false),
-    Evento(hora: "08:00", nome: "teste", fav: true),
-    Evento(hora: "08:00", nome: "teste", fav: true),
-    Evento(hora: "08:00", nome: "teste", fav: true),
-    Evento(hora: "08:00", nome: "teste", fav: true),
-    Evento(hora: "08:00", nome: "teste", fav: true)
+    Evento(hora: "08:45", nome: "UX Design", fav: false),
+    Evento(hora: "09:45", nome: "UI Design", fav: true),
+    Evento(hora: "11:30", nome: "Design System", fav: false),
+    Evento(hora: "13:00", nome: "Service Design", fav: false),
+    Evento(hora: "14:00", nome: "Interaction Design", fav: true),
+    Evento(hora: "15:00", nome: "Sound Design", fav: false),
+    Evento(hora: "16:00", nome: "Motion Design", fav: true),
+    Evento(hora: "17:00", nome: "Product Design", fav: false),
+    Evento(hora: "18:00", nome: "Design Thinking", fav: false)
 ]
 
 var lista2 : [Evento] = [
-    Evento(hora: "08:00", nome: "teste2", fav: true),
-    Evento(hora: "08:00", nome: "teste2", fav: false),
-    Evento(hora: "08:00", nome: "teste2", fav: true),
-    Evento(hora: "08:00", nome: "teste2", fav: true),
-    Evento(hora: "08:00", nome: "teste2", fav: true),
-    Evento(hora: "08:00", nome: "teste2", fav: true)
+    Evento(hora: "08:45", nome: "UX Design II", fav: false),
+    Evento(hora: "09:45", nome: "UI Design II", fav: false),
+    Evento(hora: "11:30", nome: "Design System II", fav: true),
+    Evento(hora: "13:00", nome: "Service Design II", fav: true),
+    Evento(hora: "14:00", nome: "Interaction Design II", fav: true),
+    Evento(hora: "15:00", nome: "Sound Design II", fav: false),
+    Evento(hora: "16:00", nome: "Motion Design II", fav: false),
+    Evento(hora: "17:00", nome: "Product Design II", fav: true),
+    Evento(hora: "18:00", nome: "Design Thinking II", fav: true)
 ]
 
 var lista3 : [Evento] = [
-    Evento(hora: "08:00", nome: "teste3", fav: true),
-    Evento(hora: "08:00", nome: "teste3", fav: true),
-    Evento(hora: "08:00", nome: "teste3", fav: false),
-    Evento(hora: "08:00", nome: "teste3", fav: true),
-    Evento(hora: "08:00", nome: "teste3", fav: true),
-    Evento(hora: "08:00", nome: "teste3", fav: true)
+    Evento(hora: "08:45", nome: "UX Design III", fav: false),
+    Evento(hora: "09:45", nome: "UI Design III", fav: true),
+    Evento(hora: "11:30", nome: "Design System III", fav: false),
+    Evento(hora: "13:00", nome: "Service Design III", fav: true),
+    Evento(hora: "14:00", nome: "Interaction Design III", fav: false),
+    Evento(hora: "15:00", nome: "Sound Design III", fav: true),
+    Evento(hora: "16:00", nome: "Ending Cocktail", fav: true)
+
 ]
 
 var final : [[Evento]] = [ lista1, lista2, lista3 ]
 
+struct SearchBar: View {
+    @Binding var text: String
+    
+    var body: some View {
+        HStack {
+            TextField("Search", text: $text)
+                .modifier(LeadingImageModifier(systemName: "magnifyingglass"))
+        }
+        .foregroundColor(.secondary)
+        .padding(8)
+        .background(Color("lightGray"))
+        .cornerRadius(8)
+        .padding(.horizontal)
+        .frame(width: 370)
+    }
+}
 
-
+struct LeadingImageModifier: ViewModifier {
+    let systemName: String
+    
+    func body(content: Content) -> some View {
+        HStack {
+            Image(systemName: systemName)
+                .foregroundColor(.secondary)
+            content
+        }
+    }
+}
 
 struct Agenda: View {
     @State private var dia = 0
@@ -61,55 +95,51 @@ struct Agenda: View {
     }
     
     var body: some View {
-        
-        NavigationStack {
+        ZStack {
+            Color("backgroundFirstPurple")
+                .edgesIgnoringSafeArea(.top)
             
             VStack {
                 
-                Text("Agenda")
-                    .fontWeight(.heavy).foregroundColor(.white).font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.vertical, 15)
-                    .padding(.horizontal, 30)
-                
-                Spacer()
-                Picker("?", selection: $dia) {
-                    Text("Hoje").tag(0)
-                    Text("Amanhã").tag(1)
-                    Text("Sexta").tag(2)
+                VStack {
+                    SearchBar(text: $search)
                 }
                 
-                .pickerStyle(.segmented)
-                .background(Color(.lightGray))
-                .frame(width: 320)
-                .cornerRadius(8)
-                
-                Spacer()
-                List(final[dia]) {
-                    ListElement(hora: $0.hora, nome: $0.nome, fav: $0.fav)
+                VStack {
+                    
+                    Text("Agenda")
+                        .fontWeight(.heavy).foregroundColor(.white).font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.vertical, 15)
+                        .padding(.horizontal, 30)
+                    
+                    Spacer()
+                    Picker("?", selection: $dia) {
+                        Text("Hoje").tag(0)
+                        Text("Amanhã").tag(1)
+                        Text("Sexta").tag(2)
+                    }
+                    
+                    .pickerStyle(.segmented)
+                    .background(Color("lightGray"))
+                    .frame(width: 340)
+                    .cornerRadius(8)
+                    
+                    Spacer()
+                    List(final[dia]) {
+                        ListElement(hora: $0.hora, nome: $0.nome, fav: $0.fav)
+                    }
+                    
                 }
                 
+                                .background(Color("backgroundFirstPurple"))
+                                .scrollContentBackground(.hidden)
+
+                           .background(Color("backgroundFirstPurple"))
             }
-            .onAppear(perform: {
-                UISearchBar.appearance().backgroundColor = UIColor.white
-            })
-            .background(Color("backgroundFirstPurple"))
-            .scrollContentBackground(.hidden)
         }
-        .background(Color("backgroundFirstPurple"))
-        Spacer()
-            .searchable(text: $search)
-        
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("")
-        
     }
-    
 }
-    
-    
-    
-    
     
     struct agenda_Previews: PreviewProvider {
         static var previews: some View {
