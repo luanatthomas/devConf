@@ -22,7 +22,7 @@ struct TabViewTeste: View {
                     Label("Mapa", systemImage: "map")
                 }
          
-            Text("Video Tab")
+            MainScreen()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Label("Palestra", systemImage: "text.bubble")
