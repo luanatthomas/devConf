@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Onboarding3: View {
     @State private var page = 1
+    
     var body: some View {
         
         NavigationStack {
