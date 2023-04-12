@@ -12,7 +12,7 @@ struct Profile: View {
         ZStack{
             Image("onboarding2")
                 .resizable()
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
             VStack (alignment: .leading){
                 Text("Olá, Bianca!")
                     .foregroundColor(.white)
