@@ -16,6 +16,14 @@
 		DC7D5E3829E4907E00B4E590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D5E3729E4907E00B4E590 /* ContentView.swift */; };
 		DC7D5E3A29E4907F00B4E590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7D5E3929E4907F00B4E590 /* Assets.xcassets */; };
 		DC7D5E3D29E4907F00B4E590 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7D5E3C29E4907F00B4E590 /* Preview Assets.xcassets */; };
+		DC87B5B829E6226B00CE48E8 /* CardAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5B729E6226B00CE48E8 /* CardAreas.swift */; };
+		DC87B5BA29E622CA00CE48E8 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5B929E622CA00CE48E8 /* ContentView2.swift */; };
+		DC87B5BC29E622F000CE48E8 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5BB29E622F000CE48E8 /* Onboarding1.swift */; };
+		DC87B5BE29E622F400CE48E8 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5BD29E622F400CE48E8 /* Onboarding2.swift */; };
+		DC87B5C029E622FF00CE48E8 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5BF29E622FF00CE48E8 /* Onboarding1.swift */; };
+		DC87B5C229E6230600CE48E8 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5C129E6230600CE48E8 /* Onboarding2.swift */; };
+		DC87B5C429E6230C00CE48E8 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5C329E6230C00CE48E8 /* Onboarding3.swift */; };
+		DC87B5C629E6231B00CE48E8 /* pagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B5C529E6231B00CE48E8 /* pagingView.swift */; };
 		DCE4006029E5F32300AC4B3B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE4005F29E5F32300AC4B3B /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +38,14 @@
 		DC7D5E3729E4907E00B4E590 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC7D5E3929E4907F00B4E590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC7D5E3C29E4907F00B4E590 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC87B5B729E6226B00CE48E8 /* CardAreas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardAreas.swift; path = devConf/CardAreas.swift; sourceTree = SOURCE_ROOT; };
+		DC87B5B929E622CA00CE48E8 /* ContentView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		DC87B5BB29E622F000CE48E8 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Onboarding1.swift; path = devConf/Onboarding1.swift; sourceTree = SOURCE_ROOT; };
+		DC87B5BD29E622F400CE48E8 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Onboarding2.swift; path = devConf/Onboarding2.swift; sourceTree = SOURCE_ROOT; };
+		DC87B5BF29E622FF00CE48E8 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
+		DC87B5C129E6230600CE48E8 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
+		DC87B5C329E6230C00CE48E8 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
+		DC87B5C529E6231B00CE48E8 /* pagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagingView.swift; sourceTree = "<group>"; };
 		DCE4005F29E5F32300AC4B3B /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,8 +85,13 @@
 				DC6F475429E5E8E300A97655 /* Informacoes.swift */,
 				DCE4005F29E5F32300AC4B3B /* MainScreen.swift */,
 				7BD597BD29E5C8D30022131C /* TestePageView.swift */,
+				DC87B5BF29E622FF00CE48E8 /* Onboarding1.swift */,
 				7B2D745929E497A2001A286B /* Profile.swift */,
+				DC87B5B929E622CA00CE48E8 /* ContentView2.swift */,
 				7BD597BB29E4D31F0022131C /* TabViewTeste.swift */,
+				DC87B5C529E6231B00CE48E8 /* pagingView.swift */,
+				DC87B5C329E6230C00CE48E8 /* Onboarding3.swift */,
+				DC87B5C129E6230600CE48E8 /* Onboarding2.swift */,
 				DC7D5E3929E4907F00B4E590 /* Assets.xcassets */,
 				DC7D5E3B29E4907F00B4E590 /* Preview Content */,
 			);
@@ -80,6 +101,9 @@
 		DC7D5E3B29E4907F00B4E590 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				DC87B5BD29E622F400CE48E8 /* Onboarding2.swift */,
+				DC87B5BB29E622F000CE48E8 /* Onboarding1.swift */,
+				DC87B5B729E6226B00CE48E8 /* CardAreas.swift */,
 				DC7D5E3C29E4907F00B4E590 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -156,13 +180,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7D5E3829E4907E00B4E590 /* ContentView.swift in Sources */,
+				DC87B5BC29E622F000CE48E8 /* Onboarding1.swift in Sources */,
 				7BD597BA29E4C6F90022131C /* Favorites.swift in Sources */,
 				7BD597BC29E4D31F0022131C /* TabViewTeste.swift in Sources */,
+				DC87B5BA29E622CA00CE48E8 /* ContentView2.swift in Sources */,
 				7BD597BE29E5C8D30022131C /* TestePageView.swift in Sources */,
+				DC87B5C029E622FF00CE48E8 /* Onboarding1.swift in Sources */,
 				7B2D745A29E497A2001A286B /* Profile.swift in Sources */,
 				DCE4006029E5F32300AC4B3B /* MainScreen.swift in Sources */,
+				DC87B5C229E6230600CE48E8 /* Onboarding2.swift in Sources */,
 				DC7D5E3629E4907E00B4E590 /* devConfApp.swift in Sources */,
+				DC87B5BE29E622F400CE48E8 /* Onboarding2.swift in Sources */,
+				DC87B5C629E6231B00CE48E8 /* pagingView.swift in Sources */,
+				DC87B5C429E6230C00CE48E8 /* Onboarding3.swift in Sources */,
 				DC6F475529E5E8E300A97655 /* Informacoes.swift in Sources */,
+				DC87B5B829E6226B00CE48E8 /* CardAreas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@ struct ContentView: View {
                     Text("Profile")
                 }
             
-            Text("Profile Tab")
+            Text("Perfil Tab")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "person")
