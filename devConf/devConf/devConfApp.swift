@@ -12,6 +12,7 @@ struct devConfApp: App {
     var body: some Scene {
         WindowGroup {
             TestePageView()
+            //TabViewTeste()
         }
     }
 }
