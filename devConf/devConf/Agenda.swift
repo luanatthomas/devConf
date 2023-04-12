@@ -51,7 +51,7 @@ var lista3 : [Evento] = [
     Evento(hora: "14:00", nome: "Interaction Design III", fav: false),
     Evento(hora: "15:00", nome: "Sound Design III", fav: true),
     Evento(hora: "16:00", nome: "Ending Cocktail", fav: true)
-
+    
 ]
 
 var final : [[Evento]] = [ lista1, lista2, lista3 ]
@@ -97,6 +97,7 @@ struct Agenda: View {
     var body: some View {
         ZStack {
             Color("backgroundFirstPurple")
+                
                 .edgesIgnoringSafeArea(.top)
             
             VStack {
@@ -119,7 +120,6 @@ struct Agenda: View {
                         Text("Amanhã").tag(1)
                         Text("Sexta").tag(2)
                     }
-                    
                     .pickerStyle(.segmented)
                     .background(Color("lightGray"))
                     .frame(width: 340)
@@ -129,20 +129,15 @@ struct Agenda: View {
                     List(final[dia]) {
                         ListElement(hora: $0.hora, nome: $0.nome, fav: $0.fav)
                     }
-                    
                 }
-                
-                                .background(Color("backgroundFirstPurple"))
-                                .scrollContentBackground(.hidden)
-
-                           .background(Color("backgroundFirstPurple"))
+                .scrollContentBackground(.hidden)
             }
         }
     }
 }
-    
-    struct agenda_Previews: PreviewProvider {
-        static var previews: some View {
-            Agenda()
-        }
+
+struct agenda_Previews: PreviewProvider {
+    static var previews: some View {
+        Agenda()
     }
+}
