@@ -61,11 +61,11 @@ struct Agenda: View {
     }
     
     var body: some View {
-        
-        NavigationStack {
-            
+        ZStack {
+            Image("onboarding2")
+                .resizable()
+                .edgesIgnoringSafeArea(.top)
             VStack {
-                
                 Text("Agenda")
                     .fontWeight(.heavy).foregroundColor(.white).font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -78,41 +78,26 @@ struct Agenda: View {
                     Text("Amanhã").tag(1)
                     Text("Sexta").tag(2)
                 }
-                
                 .pickerStyle(.segmented)
                 .background(Color(.lightGray))
                 .frame(width: 320)
                 .cornerRadius(8)
-                
                 Spacer()
                 List(final[dia]) {
                     ListElement(hora: $0.hora, nome: $0.nome, fav: $0.fav)
                 }
-                
             }
-            .onAppear(perform: {
-                UISearchBar.appearance().backgroundColor = UIColor.white
-            })
-            .background(Color("backgroundFirstPurple"))
             .scrollContentBackground(.hidden)
         }
-        .background(Color("backgroundFirstPurple"))
-        Spacer()
-            .searchable(text: $search)
-        
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("")
-        
     }
-    
 }
-    
-    
-    
-    
-    
-    struct agenda_Previews: PreviewProvider {
-        static var previews: some View {
-            Agenda()
-        }
+
+
+
+
+
+struct agenda_Previews: PreviewProvider {
+    static var previews: some View {
+        Agenda()
     }
+}
