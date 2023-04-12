@@ -10,17 +10,17 @@ import SwiftUI
 struct TestePageView: View {
     var body: some View {
         TabView {
-            Text("Page 1")
+            Onboarding1()
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Page 1")
                 }
-            Text("Page 2")
+            Onboarding2()
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Page 2")
                 }
-            Text("Page 3")
+            Onboarding3()
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Page 3")
