@@ -15,7 +15,7 @@ struct Onboarding1: View {
         ZStack {
             Image("onboarding1")
                 .resizable()
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
             VStack{
                 Text("Bem-vindo ao")
                     .font(.largeTitle)

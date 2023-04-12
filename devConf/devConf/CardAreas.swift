@@ -20,27 +20,30 @@ struct CardAreas: View {
     
     var body: some View {
         VStack{
-            Image(self.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120)
-            Text(self.text)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .padding(.bottom,10)
-                .lineLimit(2, reservesSpace: true)
+            VStack{
+                Image(self.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120)
+                Text(self.text)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom,10)
+                    .lineLimit(2, reservesSpace: true)
+            }.padding(15)
         }
         .frame(width: 150, height: 200)
         .background(Color(backgroundColor))
         .cornerRadius(20)
-        .padding(5)
+        
     }
 }
 
 struct CardAreas_Previews: PreviewProvider {
     static var previews: some View {
-        CardAreas()
+        CardAreas(image: "testeagain",text: "Design", backgroundColor: "stackLilac")
+        
     }
 }

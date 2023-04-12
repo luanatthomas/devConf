@@ -11,7 +11,8 @@ import SwiftUI
 struct devConfApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TestePageView()
+            //TabViewTeste()
         }
     }
 }

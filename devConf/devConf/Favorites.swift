@@ -9,10 +9,11 @@ import SwiftUI
 
 struct Favorites: View {
     var body: some View {
-        ZStack{
+        
+        ZStack {
             Image("onboarding2")
                 .resizable()
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
             ScrollView{
                 VStack (alignment: .leading){
                     Text("Palestras Favoritas")
@@ -113,6 +114,7 @@ struct Favorites: View {
                 .padding()
             }
         }
+        
     }
 }
 

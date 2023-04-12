@@ -9,25 +9,27 @@ import SwiftUI
 
 struct TestePageView: View {
     var body: some View {
-        TabView {
-            Text("Page 1")
-                .tabItem {
-                    Image(systemName: "circle")
-                    Text("Page 1")
-                }
-            Text("Page 2")
-                .tabItem {
-                    Image(systemName: "circle")
-                    Text("Page 2")
-                }
-            Text("Page 3")
-                .tabItem {
-                    Image(systemName: "circle")
-                    Text("Page 3")
-                }
+        NavigationStack {
+            TabView {
+                Onboarding1()
+                    .tabItem {
+                        Image(systemName: "circle")
+                        Text("Page 1")
+                    }
+                Onboarding2()
+                    .tabItem {
+                        Image(systemName: "circle")
+                        Text("Page 2")
+                    }
+                Onboarding3()
+                    .tabItem {
+                        Image(systemName: "circle")
+                        Text("Page 3")
+                    }
+            }
+            .edgesIgnoringSafeArea(.all)
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
         }
-        .background(.green)
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 
