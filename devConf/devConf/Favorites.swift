@@ -114,6 +114,7 @@ struct Favorites: View {
                 .padding()
             }
         }
+        
     }
 }
 

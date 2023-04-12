@@ -31,6 +31,8 @@ struct TabViewTeste: View {
                     Label("Perfil", systemImage: "person")
                 }
         }
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 
