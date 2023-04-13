@@ -33,17 +33,17 @@ struct TestePageView: View {
                         }
                         .ignoresSafeArea(.all)
                 }
-                        .frame(
-                            width: UIScreen.main.bounds.width ,
-                            height: UIScreen.main.bounds.height
-                        )
-                                        .tabViewStyle(PageTabViewStyle())
-                }
-//                            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-                            .edgesIgnoringSafeArea(.all)
+                .frame(
+                    width: UIScreen.main.bounds.width ,
+                    height: UIScreen.main.bounds.height
+                )
+                .tabViewStyle(PageTabViewStyle())
             }
+            .edgesIgnoringSafeArea(.all)
         }
     }
+}
+
 struct TestePageView_Previews: PreviewProvider {
     static var previews: some View {
         TestePageView()

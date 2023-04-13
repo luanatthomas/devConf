@@ -13,8 +13,7 @@ struct Informacoes: View {
             ZStack{
                 Image("mainscreen")
                     .resizable()
-                    .ignoresSafeArea(.all)
-                    
+                    .edgesIgnoringSafeArea(.top)
                 VStack (alignment: .trailing, spacing: 30) {
                     HStack {
                         Text("Palestrante")
@@ -108,13 +107,9 @@ struct Informacoes: View {
                     .frame(height: reader.size.height * 0.3)
                     .cornerRadius(15)
                 }
-                .navigationBarBackButtonHidden(true)
                 .padding()
-                .navigationTitle(
-                    Text("Palestrante")
-                        
-                )
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

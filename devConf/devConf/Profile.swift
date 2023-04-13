@@ -76,6 +76,8 @@ struct Profile: View {
                     .background(.white)
                     .cornerRadius(CGFloat(20))
                     Spacer()
+                        .navigationBarBackButtonHidden(true)
+                    
                 }.padding(20)
             }
         }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Onboarding1: View {
-    
     @State private var page = 1
     
     var body: some View {
@@ -31,6 +30,7 @@ struct Onboarding1: View {
                 Text("Deslize para começar")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
+                
                 
                 
             }
