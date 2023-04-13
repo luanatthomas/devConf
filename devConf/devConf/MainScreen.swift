@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainScreen: View {
+//    @State private var selection = 2
+    
     var body: some View {
         ZStack{
             Image("mainscreen")
@@ -31,7 +33,7 @@ struct MainScreen: View {
                     ZStack (alignment: .center){
                         Color.white
                         
-                        NavigationLink{
+                        NavigationLink {
                             Informacoes()
                         } label: {
                             VStack (alignment: .leading, spacing: 20){
@@ -52,14 +54,17 @@ struct MainScreen: View {
                                     VStack (alignment: .leading){
                                         Text("Silvia Dapper")
                                             .font(.headline)
+                                            .foregroundColor(Color.black)
                                             .multilineTextAlignment(.leading)
                                         Text("Acontecendo agora")
+                                            .foregroundColor(Color.black)
                                             .font(.subheadline)
                                             .multilineTextAlignment(.leading)
                                     }
                                 }
                                 Text("\"O futuro do UX de acordo com os especialistas\"")
                                     .font(.title3)
+                                    .foregroundColor(Color.black)
                                     .bold()
                                 
                                 Text("Sala 304")
@@ -70,7 +75,6 @@ struct MainScreen: View {
                             }
                             .padding()
                         }
-                        .buttonStyle(.plain)
                     }
                 }
                 .cornerRadius(15)
@@ -83,50 +87,61 @@ struct MainScreen: View {
                         .foregroundColor(.white)
                 }
                 
-                VStack (alignment: .center) {
-                    ZStack (alignment: .center){
-                        Color("backgroundSecondPurple")
-                        VStack (alignment: .leading, spacing: 20){
-                            HStack{
-                                ZStack{
-                                    Color(.white)
-                                    Image("karina")
-                                        .resizable()
-                                        .clipShape(Circle())
-                                        .overlay {
-                                            Circle().stroke(.black, lineWidth: 3)
-                                        }
-                                        .foregroundColor(.white)
+                Button {
+  //                  self.selection = 0
+//                    // Navega para a AgendaView em uma nova exibição
+//                    let controller = UIHostingController(rootView: Agenda())
+                    //UIApplication.shared.windows.first?.rootViewController?.present(controller, animated: true, completion: nil)
+                    Agenda()
+                }label: {
+                    VStack (alignment: .center) {
+                        ZStack (alignment: .center){
+                            Color("backgroundSecondPurple")
+                            VStack (alignment: .leading, spacing: 20){
+                                HStack{
+                                    ZStack{
+                                        Color(.white)
+                                        Image("karina")
+                                            .resizable()
+                                            .clipShape(Circle())
+                                            .overlay {
+                                                Circle().stroke(.black, lineWidth: 3)
+                                            }
+                                            .foregroundColor(.white)
+                                    }
+                                    .frame(width: 50, height: 50)
+                                    .cornerRadius(100)
+                                    
+                                    VStack (alignment: .leading){
+                                        Text("Karina Tronkos")
+                                            .font(.headline)
+                                            .multilineTextAlignment(.leading)
+                                            .foregroundColor(.white)
+                                        Text("Começa às 9:45")
+                                            .font(.subheadline)
+                                            .multilineTextAlignment(.leading)
+                                            .foregroundColor(.white)
+                                    }
                                 }
-                                .frame(width: 50, height: 50)
-                                .cornerRadius(100)
+                                Text("\"Boas práticas para deixar o seu app mais acessível\"")
+                                    .font(.title3)
+                                    .bold()
+                                    .foregroundColor(.white)
                                 
-                                VStack (alignment: .leading){
-                                    Text("Karina Tronkos")
-                                        .font(.headline)
-                                        .multilineTextAlignment(.leading)
-                                        .foregroundColor(.white)
-                                    Text("Começa às 9:45")
-                                        .font(.subheadline)
-                                        .multilineTextAlignment(.leading)
-                                        .foregroundColor(.white)
-                                }
+                                Text("Sala 214")
+                                    .multilineTextAlignment(.leading)
+                                    .font(.title3)
+                                    .bold()
+                                    .foregroundColor(.black)
                             }
-                            Text("\"Boas práticas para deixar o seu app mais acessível\"")
-                                .font(.title3)
-                                .bold()
-                                .foregroundColor(.white)
-                            
-                            Text("Sala 214")
-                                .multilineTextAlignment(.leading)
-                                .font(.title3)
-                                .bold()
-                                .foregroundColor(.black)
+                            .padding()
                         }
-                        .padding()
                     }
+                    .cornerRadius(15)
                 }
-                .cornerRadius(15)
+                
+               
+                
             }
             .padding()
         }
