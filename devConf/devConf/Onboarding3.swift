@@ -27,7 +27,7 @@ struct Onboarding3: View {
                             VStack{
                                 HStack{
                                     CardAreas(image: "testeagain",text: "Design", backgroundColor: "stackLilac")
-                                    CardAreas(image: "testee",text: "IA e Dados",backgroundColor: "stackGreen")
+                                    CardAreas(image: "testee",text: "IA e  Dados",backgroundColor: "stackGreen")
                                 }
                                 HStack{
                                     CardAreas(image: "teste3",text: "Agile",backgroundColor: "stackSalmon")
