@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainScreen: View {
-//    @State private var selection = 2
+
+    @Binding var selectedTab: Int
     
     var body: some View {
         ZStack{
@@ -32,8 +33,8 @@ struct MainScreen: View {
                 VStack (alignment: .center) {
                     ZStack (alignment: .center){
                         Color.white
-                        
-                        NavigationLink {
+ 
+                        NavigationLink{
                             Informacoes()
                         } label: {
                             VStack (alignment: .leading, spacing: 20){
@@ -65,6 +66,7 @@ struct MainScreen: View {
                                 Text("\"O futuro do UX de acordo com os especialistas\"")
                                     .font(.title3)
                                     .foregroundColor(Color.black)
+                                    .multilineTextAlignment(.leading)
                                     .bold()
                                 
                                 Text("Sala 304")
@@ -77,6 +79,7 @@ struct MainScreen: View {
                         }
                     }
                 }
+                .frame(height: 200)
                 .cornerRadius(15)
                 
                 HStack {
@@ -87,69 +90,70 @@ struct MainScreen: View {
                         .foregroundColor(.white)
                 }
                 
-                Button {
-  //                  self.selection = 0
-//                    // Navega para a AgendaView em uma nova exibição
-//                    let controller = UIHostingController(rootView: Agenda())
-                    //UIApplication.shared.windows.first?.rootViewController?.present(controller, animated: true, completion: nil)
-                    Agenda()
-                }label: {
-                    VStack (alignment: .center) {
-                        ZStack (alignment: .center){
-                            Color("backgroundSecondPurple")
-                            VStack (alignment: .leading, spacing: 20){
-                                HStack{
-                                    ZStack{
-                                        Color(.white)
-                                        Image("karina")
-                                            .resizable()
-                                            .clipShape(Circle())
-                                            .overlay {
-                                                Circle().stroke(.black, lineWidth: 3)
-                                            }
-                                            .foregroundColor(.white)
-                                    }
-                                    .frame(width: 50, height: 50)
-                                    .cornerRadius(100)
-                                    
-                                    VStack (alignment: .leading){
-                                        Text("Karina Tronkos")
-                                            .font(.headline)
-                                            .multilineTextAlignment(.leading)
-                                            .foregroundColor(.white)
-                                        Text("Começa às 9:45")
-                                            .font(.subheadline)
-                                            .multilineTextAlignment(.leading)
-                                            .foregroundColor(.white)
-                                    }
+
+                VStack (alignment: .center) {
+                    ZStack (alignment: .center){
+                        Color("backgroundSecondPurple")
+                        VStack (alignment: .leading, spacing: 20){
+                            HStack{
+                                ZStack{
+                                    Color(.white)
+                                    Image("karina")
+                                        .resizable()
+                                        .clipShape(Circle())
+                                        .overlay {
+                                            Circle().stroke(.black, lineWidth: 3)
+                                        }
+                                        .foregroundColor(.white)
                                 }
-                                Text("\"Boas práticas para deixar o seu app mais acessível\"")
-                                    .font(.title3)
-                                    .bold()
-                                    .foregroundColor(.white)
+                                .frame(width: 50, height: 50)
+                                .cornerRadius(100)
                                 
-                                Text("Sala 214")
-                                    .multilineTextAlignment(.leading)
-                                    .font(.title3)
-                                    .bold()
-                                    .foregroundColor(.black)
+                                VStack (alignment: .leading){
+                                    Text("Karina Tronkos")
+                                        .font(.headline)
+                                        .multilineTextAlignment(.leading)
+                                        .foregroundColor(.white)
+                                    Text("Começa às 9:45")
+                                        .font(.subheadline)
+                                        .multilineTextAlignment(.leading)
+                                        .foregroundColor(.white)
+                                }
                             }
-                            .padding()
+                            Text("\"Boas práticas para deixar o seu app mais acessível\"")
+                                .font(.title3)
+                                .bold()
+                                .foregroundColor(.white)
+                                .padding(0.0)
+                            
+                            Text("Sala 214")
+                                .multilineTextAlignment(.leading)
+                                .font(.title3)
+                                .bold()
+                                .foregroundColor(.black)
+                            
                         }
+                        .padding()
+                        
                     }
-                    .cornerRadius(15)
                 }
-                
-               
+                .frame(height: 200)
+                .cornerRadius(15)
+                .onTapGesture {
+                    self.selectedTab = 0
+                    
+                }
                 
             }
             .padding()
+
         }
+
     }
 }
 
 struct mainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        MainScreen(selectedTab: .constant(0))
     }
 }
