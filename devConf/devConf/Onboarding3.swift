@@ -12,58 +12,10 @@ struct Onboarding3: View {
     
     var body: some View {
         
-
-        //        ZStack {
-        //            Color("backgroundFirstPurple")
-        //                .ignoresSafeArea()
-        //            ScrollView{
-        //                ZStack{
-        //                    VStack{
-        //                        Text("Escolha sua área de conhecimento")
-        //                            .font(.largeTitle)
-        //                            .fontWeight(.bold)
-        //                            .foregroundColor(.white)
-        //                            .multilineTextAlignment(.center)
-        //                        //.padding(20)
-        //                        VStack{
-        //                            HStack{
-        //                                CardAreas(image: "testeagain",text: "Design", backgroundColor: "stackLilac")
-        //                                CardAreas(image: "testee",text: "IA e     Dados",backgroundColor: "stackGreen")
-        //                            }
-        //                            HStack{
-        //                                CardAreas(image: "teste3",text: "Agile",backgroundColor: "stackSalmon")
-        //                                CardAreas(image: "teste4",text: "Web e Mobile",backgroundColor: "stackBlue")
-        //                            }
-        //                            HStack{
-        //                                CardAreas(image: "teste2",text: "Cloud e Devops",backgroundColor: "stackPink")
-        //                                CardAreas(image: "teste5",text: "Micro Services",backgroundColor: "stackBeige")
-        //                            }
-        //                            HStack{
-        //                                CardAreas(image: "teste6",text: "Qualidade e testes",backgroundColor: "stackPurple")
-        //                                CardAreas(image: "teste7",text: "API",backgroundColor: "stackBlue")
-        //                            }
-        //                            NavigationLink(destination: TabViewTeste()) {
-        //                                HStack{
-        //                                    Text("Concluir").font(.title).bold()
-        //                                }
-        //                                .frame(width: 300,height: 100)
-        //                                .background(.white)
-        //                                .cornerRadius(20)
-        //                            }
-        //
-        //                        }
-        //                    }
-        //                }
-        //
-        //            }
-        //        }
-        
-        
-        
         ZStack {
             Color("backgroundFirstPurple")
                 .ignoresSafeArea()
-            ScrollView{
+            ScrollView (showsIndicators: false){
                 VStack{
                     Text("Escolha sua área de conhecimento")
                         .font(.largeTitle)
@@ -92,19 +44,16 @@ struct Onboarding3: View {
                             HStack{
                                 Text("Concluir").font(.title).bold()
                             }
-                            .frame(width: 300,height: 100)
+                            .frame(width: 200,height: 80)
                             .background(.white)
                             .cornerRadius(20)
-                            .padding(.bottom, 80)
+                            .padding(.bottom, 50)
+                            
                         }
-                        
                     }
                 }
-                
-                
             }
         }
-        
     }
 }
 
