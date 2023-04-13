@@ -13,7 +13,6 @@ struct Profile: View {
             Image("onboarding2")
                 .resizable()
                 .edgesIgnoringSafeArea(.top)
-            ScrollView {
                 VStack (alignment: .leading){
                     Text("Olá, Bianca!")
                         .foregroundColor(.white)
@@ -26,11 +25,11 @@ struct Profile: View {
                         Section(header: Text("")){
                             Image("qrcode").resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 200)
+                                .frame(width: 170)
                             Text("Premium Pass")
                         }
                     }
-                    .frame(width: 350, height: 280, alignment: .center)
+                    .frame(width: 350, height: 250, alignment: .center)
                     .background(.white)
                     .cornerRadius(CGFloat(20))
                     HStack{
@@ -79,7 +78,7 @@ struct Profile: View {
                         .navigationBarBackButtonHidden(true)
                     
                 }.padding(20)
-            }
+            
         }
     }
 }
