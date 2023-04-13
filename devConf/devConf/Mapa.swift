@@ -8,7 +8,6 @@ import SwiftUI
 
 struct Mapa: View {
     @State private var floor = "mapa1"
-    @State var search = ""
     
     var body: some View {
         
@@ -37,7 +36,7 @@ struct Mapa: View {
                     Text("2º andar").tag("mapa2")
                 }
                 .pickerStyle(.segmented)
-                .background(Color(.lightGray))
+                .background(Color("lightGray"))
                 .frame(width: 320)
                 .cornerRadius(8)
                 Spacer()

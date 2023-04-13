@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainScreen: View {
+
     @Binding var selectedTab: Int
     
     var body: some View {
@@ -32,6 +33,7 @@ struct MainScreen: View {
                 VStack (alignment: .center) {
                     ZStack (alignment: .center){
                         Color.white
+ 
                         NavigationLink{
                             Informacoes()
                         } label: {
@@ -52,14 +54,18 @@ struct MainScreen: View {
                                     VStack (alignment: .leading){
                                         Text("Silvia Dapper")
                                             .font(.headline)
+                                            .foregroundColor(Color.black)
                                             .multilineTextAlignment(.leading)
                                         Text("Acontecendo agora")
+                                            .foregroundColor(Color.black)
                                             .font(.subheadline)
                                             .multilineTextAlignment(.leading)
                                     }
                                 }
                                 Text("\"O futuro do UX de acordo com os especialistas\"")
                                     .font(.title3)
+                                    .foregroundColor(Color.black)
+                                    .multilineTextAlignment(.leading)
                                     .bold()
                                 
                                 Text("Sala 304")
@@ -70,9 +76,9 @@ struct MainScreen: View {
                             }
                             .padding()
                         }
-                        .buttonStyle(.plain)
                     }
                 }
+                .frame(height: 200)
                 .cornerRadius(15)
                 
                 HStack {
@@ -83,6 +89,7 @@ struct MainScreen: View {
                         .foregroundColor(.white)
                 }
                 
+
                 VStack (alignment: .center) {
                     ZStack (alignment: .center){
                         Color("backgroundSecondPurple")
@@ -116,22 +123,31 @@ struct MainScreen: View {
                                 .font(.title3)
                                 .bold()
                                 .foregroundColor(.white)
+                                .padding(0.0)
                             
                             Text("Sala 214")
                                 .multilineTextAlignment(.leading)
                                 .font(.title3)
                                 .bold()
                                 .foregroundColor(.black)
-                        }.onTapGesture {
-                            self.selectedTab = 0
+                            
                         }
                         .padding()
+                        
                     }
                 }
+                .frame(height: 200)
                 .cornerRadius(15)
+                .onTapGesture {
+                    self.selectedTab = 0
+                    
+                }
+                
             }
             .padding()
+
         }
+
     }
 }
 
