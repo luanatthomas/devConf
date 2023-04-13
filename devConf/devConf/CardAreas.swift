@@ -22,9 +22,9 @@ struct CardAreas: View {
     var body: some View {
         VStack {
             ZStack{
-                RoundedRectangle(cornerRadius: 14)
-                    .stroke(Color.white, lineWidth: selected)
-                    .frame(width: 150, height: 225)
+//                RoundedRectangle(cornerRadius: 14)
+//                    .stroke(Color.black, lineWidth: selected)
+//                    .frame(width: 150, height: 225)
                 VStack(alignment: .center, spacing: 10){
                     Image(self.image)
                         .resizable()

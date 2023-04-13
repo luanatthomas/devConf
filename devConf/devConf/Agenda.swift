@@ -72,7 +72,7 @@ struct Agenda: View {
             VStack {
                 VStack {
                     SearchBar(text: $search)
-                }
+                }.padding(.top, 40)
                 
                 VStack {
                     Text("Agenda")
