@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TestePageView: View {
     var body: some View {
-        NavigationStack{
             ScrollView {
                 TabView {
                     Onboarding1()
@@ -41,7 +40,6 @@ struct TestePageView: View {
             }
             .edgesIgnoringSafeArea(.all)
         }
-    }
 }
 
 struct TestePageView_Previews: PreviewProvider {
