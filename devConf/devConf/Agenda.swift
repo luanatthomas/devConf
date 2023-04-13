@@ -75,7 +75,7 @@ struct SearchBar: View {
 
 struct LeadingImageModifier: ViewModifier {
     let systemName: String
-    
+
     func body(content: Content) -> some View {
         HStack {
             Image(systemName: systemName)
