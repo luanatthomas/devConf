@@ -49,7 +49,6 @@ struct MainScreen: View {
                                     }
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(100)
-                                    
                                     VStack (alignment: .leading){
                                         Text("Silvia Dapper")
                                             .font(.headline)
