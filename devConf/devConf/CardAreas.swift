@@ -19,28 +19,26 @@ struct CardAreas: View {
     }
     
     var body: some View {
-        VStack{
-            VStack{
-                
-                Image(self.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150)
-//                Spacer()
+        VStack(alignment: .center, spacing: 10){
+            Image(self.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 140)
+            VStack {
                 Text(self.text)
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .padding(.bottom,-5)
-                    .lineLimit(2, reservesSpace: true)
-//                Spacer()
-            }.padding(5)
+            }
+            .frame(height: 75)
+            
+            
+            
         }
-        .frame(width: 150, height: 200)
+        .frame(width: 160, height: 235)
         .background(Color(backgroundColor))
         .cornerRadius(20)
-        
     }
 }
 

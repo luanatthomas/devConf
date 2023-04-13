@@ -10,7 +10,7 @@ import SwiftUI
 struct TabViewTeste: View {
     @State private var selectedTab : Int = 2
     var body: some View {
-        NavigationStack {
+        NavigationView {
             TabView(selection: $selectedTab) {
                 Agenda()
                     .tabItem {

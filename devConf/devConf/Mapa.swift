@@ -9,19 +9,16 @@ import SwiftUI
 struct Mapa: View {
     @State private var floor = "mapa1"
     @State var search = ""
-
+    
     var body: some View {
-        
         ZStack {
-            
-            
             Image("onboarding2")
                 .resizable()
                 .edgesIgnoringSafeArea(.top)
             VStack {
                 VStack {
-                                SearchBar(text: $search)
-                            }
+                    SearchBar(text: $search)
+                }
                 Spacer()
                 Text("Mapa do prédio")
                     .fontWeight(.heavy).foregroundColor(.white).font(.title)
@@ -47,10 +44,9 @@ struct Mapa: View {
                 .cornerRadius(8)
                 Spacer()
                     .scrollContentBackground(.hidden)
-
+                    .navigationBarBackButtonHidden(true)
             }
         }
-
     }
 }
 
