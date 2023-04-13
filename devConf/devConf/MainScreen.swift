@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainScreen: View {
+    @Binding var selectedTab: Int
+    
     var body: some View {
         ZStack{
             Image("mainscreen")
@@ -30,7 +32,6 @@ struct MainScreen: View {
                 VStack (alignment: .center) {
                     ZStack (alignment: .center){
                         Color.white
-                        
                         NavigationLink{
                             Informacoes()
                         } label: {
@@ -122,6 +123,8 @@ struct MainScreen: View {
                                 .font(.title3)
                                 .bold()
                                 .foregroundColor(.black)
+                        }.onTapGesture {
+                            self.selectedTab = 0
                         }
                         .padding()
                     }
@@ -135,6 +138,6 @@ struct MainScreen: View {
 
 struct mainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        MainScreen(selectedTab: .constant(0))
     }
 }
