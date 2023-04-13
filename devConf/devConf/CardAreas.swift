@@ -11,6 +11,7 @@ struct CardAreas: View {
     var image = ""
     var text = ""
     var backgroundColor = ""
+    var selected : CGFloat = 3
     
     init(image: String = "", text: String = "", backgroundColor: String = "") {
         self.image = image

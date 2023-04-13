@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Informacoes: View {
     var body: some View {
+        
         GeometryReader{ reader in
             ZStack{
                 Image("mainscreen")

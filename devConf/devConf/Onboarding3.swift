@@ -12,6 +12,7 @@ struct Onboarding3: View {
     
     var body: some View {
         
+
         //        ZStack {
         //            Color("backgroundFirstPurple")
         //                .ignoresSafeArea()
