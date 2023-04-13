@@ -10,12 +10,12 @@ import SwiftUI
 struct Onboarding2: View {
     var body: some View {
         ZStack{
-        Image("onboarding2")
-            .resizable()
-            .edgesIgnoringSafeArea(.top)
+            Image("onboarding2")
+                .resizable()
+                .ignoresSafeArea()
             VStack{
                 Spacer()
-            Image("maos")
+                Image("maos")
                 Text("Acesse o evento com o QR Code no seu perfil")
                     .font(.title)
                     .foregroundColor(.white)

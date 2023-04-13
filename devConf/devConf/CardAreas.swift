@@ -20,31 +20,26 @@ struct CardAreas: View {
     }
     
     var body: some View {
-        VStack{
-            ZStack{
-                RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.white, lineWidth: selected)
-                    .frame(width: 135, height: 185)
-                VStack{
-                    Image(self.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 120)
-                    Text(self.text)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom,10)
-                        .lineLimit(2, reservesSpace: true)
-                }
-                .padding(15)
+        VStack(alignment: .center, spacing: 10){
+            Image(self.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 140)
+            VStack {
+                Text(self.text)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
             }
+            .frame(height: 75)
+            
+            
+            
         }
-        .frame(width: 150, height: 200)
+        .frame(width: 160, height: 235)
         .background(Color(backgroundColor))
         .cornerRadius(20)
-        
     }
 }
 
