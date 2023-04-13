@@ -11,6 +11,7 @@ struct CardAreas: View {
     var image = ""
     var text = ""
     var backgroundColor = ""
+    var selected : CGFloat = 3
     
     init(image: String = "", text: String = "", backgroundColor: String = "") {
         self.image = image
@@ -20,19 +21,25 @@ struct CardAreas: View {
     
     var body: some View {
         VStack{
-            VStack{
-                Image(self.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 120)
-                Text(self.text)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom,10)
-                    .lineLimit(2, reservesSpace: true)
-            }.padding(15)
+            ZStack{
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color.white, lineWidth: selected)
+                    .frame(width: 135, height: 185)
+                VStack{
+                    Image(self.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 120)
+                    Text(self.text)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom,10)
+                        .lineLimit(2, reservesSpace: true)
+                }
+                .padding(15)
+            }
         }
         .frame(width: 150, height: 200)
         .background(Color(backgroundColor))

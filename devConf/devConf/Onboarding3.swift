@@ -50,7 +50,6 @@ struct Onboarding3: View {
                                     .background(.white)
                                     .cornerRadius(20)
                                 }
-                                
                             }
                         }
                     }
