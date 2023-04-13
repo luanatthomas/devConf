@@ -108,6 +108,7 @@ struct Informacoes: View {
                     .frame(height: reader.size.height * 0.3)
                     .cornerRadius(15)
                 }
+                .navigationBarBackButtonHidden(true)
                 .padding()
                 .navigationTitle(
                     Text("Palestrante")
