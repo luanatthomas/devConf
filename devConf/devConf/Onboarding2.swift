@@ -12,7 +12,7 @@ struct Onboarding2: View {
         ZStack{
         Image("onboarding2")
             .resizable()
-            .edgesIgnoringSafeArea(.top)
+            .ignoresSafeArea()
             VStack{
                 Spacer()
             Image("maos")
