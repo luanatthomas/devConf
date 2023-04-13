@@ -30,12 +30,7 @@ struct Onboarding1: View {
                 Text("Deslize para começar")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-<<<<<<< HEAD
-=======
                 
-                
-                
->>>>>>> b83491ddc001849aac780b901b2652572d06f36a
             }
         }
     }
