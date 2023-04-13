@@ -1,5 +1,5 @@
 //
-//  Map1.swift
+//  Agenda.swift
 //  devConf
 //
 //  Created by Fernando Fontanive on 10/04/23.
@@ -56,85 +56,85 @@ var lista3 : [Evento] = [
 
 var final : [[Evento]] = [ lista1, lista2, lista3 ]
 
-struct SearchBar: View {
-    @Binding var text: String
+//struct SearchBar: View {
+//    @Binding var text: String
     
-    var body: some View {
-        HStack {
-            TextField("Search", text: $text)
-                .modifier(LeadingImageModifier(systemName: "magnifyingglass"))
-        }
-        .foregroundColor(.secondary)
-        .padding(8)
-        .background(Color("lightGray"))
-        .cornerRadius(8)
-        .padding(.horizontal)
-        .frame(width: 370)
-    }
+var body: some View {
+    //        HStack {
+    //            TextField("Search", text: $text)
+    //                .modifier(LeadingImageModifier(systemName: "magnifyingglass"))
+    //        }
+    //        .foregroundColor(.secondary)
+    //        .padding(8)
+    //        .background(Color("lightGray"))
+    //        .cornerRadius(8)
+    //        .padding(.horizontal)
+    //        .frame(width: 370)
+    
+    
+    
+    //struct LeadingImageModifier: ViewModifier {
+    //    let systemName: String
+    //
+    //    func body(content: Content) -> some View {
+    //        HStack {
+    //            Image(systemName: systemName)
+    //                .foregroundColor(.secondary)
+    //            content
+    //        }
+    //    }
+    Text("Teste")
 }
-
-struct LeadingImageModifier: ViewModifier {
-    let systemName: String
-
-    func body(content: Content) -> some View {
-        HStack {
-            Image(systemName: systemName)
-                .foregroundColor(.secondary)
-            content
+    struct Agenda: View {
+        @State private var dia = 0
+        @State var search = ""
+        
+        struct Hoje: Identifiable {
+            let name: String
+            let id = UUID()
         }
-    }
-}
-
-struct Agenda: View {
-    @State private var dia = 0
-    @State var search = ""
-    
-    struct Hoje: Identifiable {
-        let name: String
-        let id = UUID()
-    }
-    
-    var body: some View {
-        ZStack {
-            Color("backgroundFirstPurple")
+        
+        var body: some View {
+            ZStack {
+                Color("backgroundFirstPurple")
                 
-                .edgesIgnoringSafeArea(.top)
-            
-            VStack {
-                
-                VStack {
-                    SearchBar(text: $search)
-                }
+                    .edgesIgnoringSafeArea(.top)
                 
                 VStack {
                     
-                    Text("Agenda")
-                        .fontWeight(.heavy).foregroundColor(.white).font(.title)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.vertical, 15)
-                        .padding(.horizontal, 30)
+                                    VStack {
+                                        SearchBar(text: $search)
+                                    }
                     
-                    Spacer()
-                    Picker("?", selection: $dia) {
-                        Text("Hoje").tag(0)
-                        Text("Amanhã").tag(1)
-                        Text("Sexta").tag(2)
+                    VStack {
+                        
+                        Text("Agenda")
+                            .fontWeight(.heavy).foregroundColor(.white).font(.title)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.vertical, 15)
+                            .padding(.horizontal, 30)
+                        
+                        Spacer()
+                        Picker("?", selection: $dia) {
+                            Text("Hoje").tag(0)
+                            Text("Amanhã").tag(1)
+                            Text("Sexta").tag(2)
+                        }
+                        .pickerStyle(.segmented)
+                        .background(Color("lightGray"))
+                        .frame(width: 340)
+                        .cornerRadius(8)
+                        
+                        Spacer()
+                        List(final[dia]) {
+                            ListElement(hora: $0.hora, nome: $0.nome, fav: $0.fav)
+                        }
                     }
-                    .pickerStyle(.segmented)
-                    .background(Color("lightGray"))
-                    .frame(width: 340)
-                    .cornerRadius(8)
-                    
-                    Spacer()
-                    List(final[dia]) {
-                        ListElement(hora: $0.hora, nome: $0.nome, fav: $0.fav)
-                    }
+                    .scrollContentBackground(.hidden)
                 }
-                .scrollContentBackground(.hidden)
             }
         }
     }
-}
 
 struct agenda_Previews: PreviewProvider {
     static var previews: some View {

@@ -21,18 +21,21 @@ struct CardAreas: View {
     var body: some View {
         VStack{
             VStack{
+                
                 Image(self.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 120)
+                    .frame(width: 150)
+//                Spacer()
                 Text(self.text)
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .padding(.bottom,10)
+                    .padding(.bottom,-5)
                     .lineLimit(2, reservesSpace: true)
-            }.padding(15)
+//                Spacer()
+            }.padding(5)
         }
         .frame(width: 150, height: 200)
         .background(Color(backgroundColor))
