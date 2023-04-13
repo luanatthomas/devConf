@@ -31,6 +31,7 @@ struct TabViewTeste: View {
                 NavigationStack{
                     MainScreen(selectedTab: $selectedTab)
                 }
+                .accentColor(.white)
                 .tabItem {
                     Label("Palestra", systemImage: "text.bubble")
                 }

@@ -18,7 +18,7 @@ struct Mapa: View {
             VStack {
                 VStack {
                     SearchBar(text: $search)
-                }
+                }.padding(.top, 40)
                 Spacer()
                 Text("Mapa do prédio")
                     .fontWeight(.heavy).foregroundColor(.white).font(.title)

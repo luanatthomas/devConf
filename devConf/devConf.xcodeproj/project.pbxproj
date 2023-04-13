@@ -79,24 +79,24 @@
 		DC7D5E3429E4907E00B4E590 /* devConf */ = {
 			isa = PBXGroup;
 			children = (
-				20A7CAEE29E710BD007B62F3 /* ListElement.swift */,
-				20A7CAEA29E71091007B62F3 /* Agenda.swift */,
-				20A7CAEB29E71091007B62F3 /* Mapa.swift */,
-				DC7D5E3529E4907E00B4E590 /* devConfApp.swift */,
-				7BD597B929E4C6F90022131C /* Favorites.swift */,
-				DC7D5E3729E4907E00B4E590 /* ContentView.swift */,
-				DC6F475429E5E8E300A97655 /* Informacoes.swift */,
-				DCE4005F29E5F32300AC4B3B /* MainScreen.swift */,
 				7BD597BD29E5C8D30022131C /* TestePageView.swift */,
-				7BD597C529E711600022131C /* CardAreas.swift */,
-				7B2D745929E497A2001A286B /* Profile.swift */,
 				7BD597C029E711330022131C /* Onboarding1.swift */,
 				7BD597C129E711330022131C /* Onboarding2.swift */,
 				7BD597BF29E711320022131C /* Onboarding3.swift */,
 				7BD597BB29E4D31F0022131C /* TabViewTeste.swift */,
+				7BD597C529E711600022131C /* CardAreas.swift */,
+				DCE4005F29E5F32300AC4B3B /* MainScreen.swift */,
+				DC6F475429E5E8E300A97655 /* Informacoes.swift */,
+				20A7CAEA29E71091007B62F3 /* Agenda.swift */,
+				20A7CAEB29E71091007B62F3 /* Mapa.swift */,
+				7B2D745929E497A2001A286B /* Profile.swift */,
+				7BD597B929E4C6F90022131C /* Favorites.swift */,
+				20A7CAEE29E710BD007B62F3 /* ListElement.swift */,
+				DC7D5E3529E4907E00B4E590 /* devConfApp.swift */,
+				DC7D5E3729E4907E00B4E590 /* ContentView.swift */,
+				20B4627329E86BAE00AD08A6 /* SearchBarTop.swift */,
 				DC7D5E3929E4907F00B4E590 /* Assets.xcassets */,
 				DC7D5E3B29E4907F00B4E590 /* Preview Content */,
-				20B4627329E86BAE00AD08A6 /* SearchBarTop.swift */,
 			);
 			path = devConf;
 			sourceTree = "<group>";

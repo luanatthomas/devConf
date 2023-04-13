@@ -18,11 +18,15 @@ struct Favorites: View {
                 VStack (alignment: .leading){
                     Text("Palestras Favoritas")
                         .foregroundColor(.white)
-                        .font(.system(.largeTitle))
+                        .font(.title)
+                        .padding(.top, 40)
+                        .bold()
+                    
                     Text("Design")
                         .foregroundColor(.white)
                         .font(.system(.title2))
                         .fontWeight(.bold)
+                        .padding(.top, 10)
                     VStack{
                         Divider()
                         HStack{
@@ -62,6 +66,8 @@ struct Favorites: View {
                             .foregroundColor(.white)
                             .font(.system(.title2))
                             .fontWeight(.bold)
+                            .padding(.top, 10)
+                            .padding(.bottom, -15)
                         Spacer()
                     }
                     .padding(.vertical,20)

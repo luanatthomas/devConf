@@ -16,11 +16,14 @@ struct Profile: View {
                 VStack (alignment: .leading){
                     Text("Olá, Bianca!")
                         .foregroundColor(.white)
-                        .font(.system(.largeTitle))
+                        .font(.title)
+                        .padding(.top, 40)
+                        .bold()
                     Text("Acesse o evento")
                         .foregroundColor(.white)
-                        .font(.system(.title))
+                        .font(.system(.title2))
                         .fontWeight(.bold)
+                        .padding(.top, 15)
                     VStack{
                         Section(header: Text("")){
                             Image("qrcode").resizable()
@@ -35,7 +38,7 @@ struct Profile: View {
                     HStack{
                         Text("Informações")
                             .foregroundColor(.white)
-                            .font(.system(.title))
+                            .font(.system(.title2))
                             .fontWeight(.bold)
                         Spacer()
                     }
@@ -76,7 +79,7 @@ struct Profile: View {
                     .cornerRadius(CGFloat(20))
                     Spacer()
                         .navigationBarBackButtonHidden(true)
-                    
+
                 }.padding(20)
             
         }
