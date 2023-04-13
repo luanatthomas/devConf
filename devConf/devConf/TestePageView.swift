@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TestePageView: View {
     var body: some View {
-        NavigationStack {
             TabView {
                 Onboarding1()
                     .tabItem {
@@ -30,7 +29,6 @@ struct TestePageView: View {
             .edgesIgnoringSafeArea(.all)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
         }
-    }
 }
 
 struct TestePageView_Previews: PreviewProvider {

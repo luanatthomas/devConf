@@ -31,8 +31,6 @@ struct Onboarding1: View {
                 Text("Deslize para começar")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                
-                
             }
         }
     }
