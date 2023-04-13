@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Onboarding3: View {
     @State private var page = 1
+    @State private var isPresenting : Bool = false
     
     var body: some View {
         
@@ -40,7 +41,9 @@ struct Onboarding3: View {
                             CardAreas(image: "teste6",text: "Qualidade e testes",backgroundColor: "stackPurple")
                             CardAreas(image: "teste7",text: "API",backgroundColor: "stackBlue")
                         }
-                        NavigationLink(destination: TabViewTeste()) {
+                        Button {
+                            self.isPresenting = true
+                        } label: {
                             HStack{
                                 Text("Concluir").font(.title).bold()
                             }
@@ -48,11 +51,15 @@ struct Onboarding3: View {
                             .background(.white)
                             .cornerRadius(20)
                             .padding(.bottom, 50)
-                            
                         }
+                        
                     }
                 }
             }
+            
+        }
+        .fullScreenCover(isPresented: $isPresenting){
+            TabViewTeste()
         }
     }
 }
