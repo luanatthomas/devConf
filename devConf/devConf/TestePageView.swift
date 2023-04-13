@@ -9,26 +9,32 @@ import SwiftUI
 
 struct TestePageView: View {
     var body: some View {
-        NavigationStack {
+        NavigationStack{
             TabView {
                 Onboarding1()
                     .tabItem {
                         Image(systemName: "circle")
                         Text("Page 1")
                     }
+                    .ignoresSafeArea(.all)
+
                 Onboarding2()
                     .tabItem {
                         Image(systemName: "circle")
                         Text("Page 2")
                     }
+                    .ignoresSafeArea(.all)
+                
                 Onboarding3()
                     .tabItem {
                         Image(systemName: "circle")
                         Text("Page 3")
                     }
+                    .ignoresSafeArea(.all)
+
             }
-            .edgesIgnoringSafeArea(.all)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+            //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                .ignoresSafeArea(.all)
         }
     }
 }

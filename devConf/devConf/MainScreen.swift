@@ -146,9 +146,7 @@ struct MainScreen: View {
                 
             }
             .padding()
-
         }
-
     }
 }
 

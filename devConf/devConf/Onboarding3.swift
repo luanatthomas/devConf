@@ -15,7 +15,7 @@ struct Onboarding3: View {
         NavigationStack {
             ZStack {
                 Color("backgroundFirstPurple")
-                    .edgesIgnoringSafeArea(.top)
+                    .ignoresSafeArea()
                 ScrollView{
                     ZStack{
                         VStack{
