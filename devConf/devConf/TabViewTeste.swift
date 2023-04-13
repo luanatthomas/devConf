@@ -9,8 +9,7 @@ import SwiftUI
 
 struct TabViewTeste: View {
     @State private var selectedTab : Int = 2
-    var body: some View {
-        
+    var body: some View {        
         TabView(selection: $selectedTab) {
             NavigationStack {
                 Agenda()

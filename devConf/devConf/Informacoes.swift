@@ -15,7 +15,10 @@ struct Informacoes: View {
                 Image("mainscreen")
                     .resizable()
                     .edgesIgnoringSafeArea(.top)
+<<<<<<< HEAD
                     
+=======
+>>>>>>> b83491ddc001849aac780b901b2652572d06f36a
                 VStack (alignment: .trailing, spacing: 30) {
                     HStack {
                         Text("Palestrante")
@@ -110,11 +113,8 @@ struct Informacoes: View {
                     .cornerRadius(15)
                 }
                 .padding()
-                .navigationTitle(
-                    Text("Palestrante")
-                        
-                )
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

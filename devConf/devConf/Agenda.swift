@@ -1,5 +1,5 @@
 //
-//  Map1.swift
+//  Agenda.swift
 //  devConf
 //
 //  Created by Fernando Fontanive on 10/04/23.
@@ -56,35 +56,6 @@ var lista3 : [Evento] = [
 
 var final : [[Evento]] = [ lista1, lista2, lista3 ]
 
-struct SearchBar: View {
-    @Binding var text: String
-    
-    var body: some View {
-        HStack {
-            TextField("Search", text: $text)
-                .modifier(LeadingImageModifier(systemName: "magnifyingglass"))
-        }
-        .foregroundColor(.secondary)
-        .padding(8)
-        .background(Color("lightGray"))
-        .cornerRadius(8)
-        .padding(.horizontal)
-        .frame(width: 370)
-    }
-}
-
-struct LeadingImageModifier: ViewModifier {
-    let systemName: String
-
-    func body(content: Content) -> some View {
-        HStack {
-            Image(systemName: systemName)
-                .foregroundColor(.secondary)
-            content
-        }
-    }
-}
-
 struct Agenda: View {
     @State private var dia = 0
     @State var search = ""
@@ -97,17 +68,13 @@ struct Agenda: View {
     var body: some View {
         ZStack {
             Color("backgroundFirstPurple")
-                
                 .edgesIgnoringSafeArea(.top)
-            
             VStack {
-                
                 VStack {
                     SearchBar(text: $search)
                 }
                 
                 VStack {
-                    
                     Text("Agenda")
                         .fontWeight(.heavy).foregroundColor(.white).font(.title)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -129,6 +96,7 @@ struct Agenda: View {
                     List(final[dia]) {
                         ListElement(hora: $0.hora, nome: $0.nome, fav: $0.fav)
                     }
+                    .navigationBarBackButtonHidden(true)
                 }
                 .scrollContentBackground(.hidden)
             }
