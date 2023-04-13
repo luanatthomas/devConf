@@ -9,49 +9,38 @@ import SwiftUI
 
 struct TabViewTeste: View {
     @State private var selectedTab : Int = 2
-    var body: some View {        
-        TabView(selection: $selectedTab) {
-            NavigationStack {
+    var body: some View {
+        NavigationView {
+            TabView(selection: $selectedTab) {
                 Agenda()
-            }
-            .tabItem {
-                Label("Agenda", systemImage: "calendar")
-            }
-            .tag(0)
-            
-            NavigationStack {
+                    .tabItem {
+                        Label("Agenda", systemImage: "calendar")
+                    }
+                    .tag(0)
                 Mapa()
-            }
-            .tabItem {
-                Label("Mapa", systemImage: "map")
-            }
-            .tag(1)
-            
-            NavigationStack {
+                    .tabItem {
+                        Label("Mapa", systemImage: "map")
+                    }
+                    .tag(1)
                 MainScreen(selectedTab: $selectedTab)
-            }
-            .tabItem {
-                Label("Palestra", systemImage: "text.bubble")
-            }
-            .tag(2)
-            
-            NavigationStack {
+                    .tabItem {
+                        Label("Palestra", systemImage: "text.bubble")
+                    }
+                    .tag(2)
                 Favorites()
-            }
-            .tabItem {
-                Label("Favoritos", systemImage: "heart")
-            }
-            .tag(3)
-            
-            NavigationStack {
+                    .tabItem {
+                        Label("Favoritos", systemImage: "heart")
+                    }
+                    .tag(3)
                 Profile()
+                    .tabItem {
+                        Label("Perfil", systemImage: "person")
+                    }
+                    .tag(4)
             }
-            .tabItem {
-                Label("Perfil", systemImage: "person")
-            }
-            .tag(4)
+            .navigationBarBackButtonHidden(true)
         }
-        
+
     }
 }
 
