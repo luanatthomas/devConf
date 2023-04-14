@@ -21,7 +21,9 @@ struct ListElement: View {
     var body: some View {
         HStack {
             Text(self.hora)
+                .bold()
             Text(self.nome)
+                .font(.body)
             Spacer()
             Image(systemName: self.fav ? "heart.fill" : "heart")
         }
@@ -30,6 +32,6 @@ struct ListElement: View {
 
 struct ListElement_Previews: PreviewProvider {
     static var previews: some View {
-        ListElement(hora: "", nome: "", fav: true)
+        ListElement(hora: "08:45", nome: "UX Design", fav: true)
     }
 }

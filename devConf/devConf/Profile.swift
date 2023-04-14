@@ -50,26 +50,26 @@ struct Profile: View {
                             HStack{
                                 Image(systemName: "text.bubble")
                                 Text("Minhas Trilhas")
-                                    .font(.system(.title2))
+                                    .font(.body)
                                 Spacer()
                             }
                             Divider()
                             HStack{
                                 Image(systemName: "heart")
                                 Text("Palestras Favoritas")
-                                    .font(.system(.title2))
+                                    .font(.body)
                                 Spacer()
                             }
                             Divider()
                             HStack{
                                 Image(systemName: "gearshape")
-                                Text("Configurações")                                .font(.system(.title2))
+                                Text("Configurações")                                .font(.body)
                                 Spacer()
                             }
                             Divider()
                             HStack{
                                 Image(systemName: "headphones.circle")
-                                Text("Ajuda")                                .font(.system(.title2))
+                                Text("Ajuda")                                .font(.body)
                                 Spacer()
                             }
                             Divider()
