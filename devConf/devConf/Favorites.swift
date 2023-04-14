@@ -29,30 +29,31 @@ struct Favorites: View {
                         .padding(.top, 10)
                     VStack{
                         Divider()
+                            .padding(.bottom, 5)
                         HStack{
                             Text("UX Design")
-                                .font(.system(.title2))
+                                .font(.body)
                             Spacer()
                             Image(systemName: "heart.fill")
                         }
                         Divider()
                         HStack{
                             Text("UI Design")
-                                .font(.system(.title2))
+                                .font(.body)
                             Spacer()
                             Image(systemName: "heart.fill")
                         }
                         Divider()
                         HStack{
                             Text("Design System")
-                                .font(.system(.title2))
+                                .font(.body)
                             Spacer()
                             Image(systemName: "heart.fill")
                         }
                         Divider()
                         HStack{
                             Text("Service Design")
-                                .font(.system(.title2))
+                                .font(.body)
                             Spacer()
                             Image(systemName: "heart.fill")
                         }
@@ -73,23 +74,24 @@ struct Favorites: View {
                     .padding(.vertical,20)
                     VStack{
                         Divider()
+                            .padding(.bottom, 5)
                         HStack{
                             Text("Microfrontends")
-                                .font(.system(.title2))
+                                .font(.body)
                             Spacer()
                             Image(systemName: "heart.fill")
                         }
                         Divider()
                         HStack{
                             Text("SwiftUI")
-                                .font(.system(.title2))
+                                .font(.body)
                             Spacer()
                             Image(systemName: "heart.fill")
                         }
                         Divider()
                         HStack{
                             Text("Web e Frontend")
-                                .font(.system(.title2))
+                                .font(.body)
                             Spacer()
                             Image(systemName: "heart.fill")
                         }
@@ -97,7 +99,7 @@ struct Favorites: View {
                         HStack {
                             HStack{
                                 Text("Javascript")
-                                    .font(.system(.title2))
+                                    .font(.body)
                                 Spacer()
                                 Image(systemName: "heart.fill")
                             }
@@ -106,7 +108,7 @@ struct Favorites: View {
                         Group{
                             HStack{
                                 Text("React")
-                                    .font(.system(.title2))
+                                    .font(.body)
                                 Spacer()
                                 Image(systemName: "heart.fill")
                             }

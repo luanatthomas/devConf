@@ -14,14 +14,16 @@ struct Onboarding2: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack{
-                Spacer()
+               // Spacer()
                 Image("maos")
+                    .padding(.top, 70)
                 Text("Acesse o evento com o QR Code no seu perfil")
                     .font(.title)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .padding(55)
-                
+                    //.padding(55)
+                    .padding(.bottom, 55)
+                    .padding(.horizontal, 55)
             }
         }
         

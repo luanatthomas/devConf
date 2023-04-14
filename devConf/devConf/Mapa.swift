@@ -21,11 +21,12 @@ struct Mapa: View {
                 }.padding(.top, 40)
                 Spacer()
                 Text("Mapa do prédio")
-                    .fontWeight(.heavy).foregroundColor(.white).font(.title)
+                    .fontWeight(.bold).foregroundColor(.white).font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 15)
                     .padding(.horizontal, 30)
                 Text("Trilha de UX Design").foregroundColor(.white)
+                    .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 30)
                 ZStack {
